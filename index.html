@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login SIADJAK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <main class="container">
+      <!-- LEFT PANEL -->
+      <section class="left-panel">
+        <div class="left-overlay"></div>
+
+        <div class="left-content">
+          <div class="brand-badge">Enterprise Archive System</div>
+
+          <h1>Kelola Arsip Perusahaan Lebih Aman, Modern, dan Terintegrasi</h1>
+
+          <p class="hero-desc">
+            SIADJAK dirancang untuk perusahaan yang menaungi arsip dari berbagai
+            perusahaan lain, dengan sistem yang rapi, profesional, dan mudah digunakan.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-card">
+              <div class="feature-icon">📁</div>
+              <div>
+                <h3>Manajemen Arsip Terpusat</h3>
+                <p>Semua dokumen proyek tersimpan dalam satu sistem yang tertata.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🔐</div>
+              <div>
+                <h3>Kontrol Akses Aman</h3>
+                <p>Hak akses admin dan user dipisahkan untuk menjaga keamanan data.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <div>
+                <h3>Pencarian Lebih Cepat</h3>
+                <p>Dokumen dapat dipantau, dicari, dan dikelola dengan efisien.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <section class="right-panel">
+        <div class="login-wrapper">
+          <div class="login-box">
+            <div class="top-chip">SIADJAK Secure Access</div>
+
+            <h1>Selamat Datang</h1>
+
+            <div class="logo-wrap">
+              <img src="LOGO.png" alt="Logo SIADJAK" class="logo" />
+            </div>
+
+            <h2>SIADJAK</h2>
+            <p class="subtitle">Arsip Digital Jasa Konstruksi</p>
+
+            <form id="loginForm">
+              <div class="input-group">
+                <label for="username">Username / Email</label>
+                <div class="input-box">
+                  <span class="input-icon">👤</span>
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="Masukkan username atau email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-box">
+                  <span class="input-icon">🔒</span>
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                    required
+                  />
+                  <button type="button" class="toggle-pass" id="togglePass" aria-label="Tampilkan password">👁</button>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="remember-me">
+                  <input type="checkbox" id="rememberMe" />
+                  <span>Ingat saya</span>
+                </label>
+
+                <button type="button" class="forgot" onclick="openForgot()">
+                  Lupa Password?
+                </button>
+              </div>
+
+              <button type="submit" class="login-btn">
+                <span>Login</span>
+                <span>➜</span>
+              </button>
+            </form>
+
+            <div class="security-note">
+              <span>🛡</span>
+              <p>
+                Portal aman untuk pengelolaan arsip perusahaan dan dokumen proyek
+                multi-entitas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL RESET PASSWORD -->
+  <div id="forgotModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" type="button" onclick="closeForgot()">✕</button>
+
+      <h3>Reset Password</h3>
+      <p class="modal-subtitle">
+        Masukkan username / email dan password baru untuk simulasi reset akun.
+      </p>
+
+      <div class="modal-form">
+        <div class="modal-field">
+          <label for="resetUser">Username / Email</label>
+          <input type="text" id="resetUser" placeholder="Masukkan username / email" />
+        </div>
+
+        <div class="modal-field">
+          <label for="newPass">Password Baru</label>
+          <input type="password" id="newPass" placeholder="Masukkan password baru" />
+        </div>
+
+        <button class="save-btn" type="button" onclick="resetPassword()">
+          Simpan Password Baru
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
